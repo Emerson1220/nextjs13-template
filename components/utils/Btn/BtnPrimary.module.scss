@@ -1,0 +1,29 @@
+@use '../../../styles/btnStyle' as *;
+
+.BtnPrimary {
+  @include style-btn1(
+    //Bg Color,
+    #2ec7b9,
+    //Text Color,
+    white,
+    //Border Radius,
+    12px,
+    //Bg Hover,
+    #4dccc6,
+    //Text Color Hover,
+    #4dccc6,
+    //Color graduation
+    #03c8a8,
+    //Color graduation Hover
+    #96e4df
+  );
+  @include btnSize(
+    //width px
+    auto,
+    //Heigh px
+    auto,
+    //Padding (em)
+    1
+  );
+  @include btnFont;
+}

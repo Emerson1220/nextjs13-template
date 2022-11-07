@@ -1,0 +1,35 @@
+////////////////////////////////
+//THEME
+////////////////////////////////
+
+//Title
+$primary60: #fc9f1c;
+$secondary30: #2ec7b9;
+$additoinal10: #fefde3;
+$title: #114450;
+$paragraphe: grey;
+
+//NavBar
+$bgNavBar: #2ec7b9;
+$clrNavItems: white;
+
+//Footer
+$bgFooter: #114450;
+
+////////////////////////////////
+//FONT FAMILY
+////////////////////////////////
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Asap+Condensed&family=Francois+One&family=Poppins:ital,wght@0,200;1,100&family=Roboto&family=Secular+One&family=Smooch&display=swap');
+@mixin font-family {
+  font-family: 'Roboto', sans-serif;
+}
+
+////////////////////////////////∑
+//BREAKPOINT
+////////////////////////////////
+$desktop4k: 1800px;
+$desktop: 1280px;
+$tabletLand: 975px;
+$tablet: 768px;
+$mobil: 480px;

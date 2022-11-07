@@ -1,0 +1,100 @@
+////////////////////////////////
+//BTN FONT
+////////////////////////////////
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Asap+Condensed&family=Francois+One&family=Poppins:ital,wght@0,200;1,100&family=Roboto&family=Secular+One&family=Smooch&display=swap');
+@mixin btnFont {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+////////////////////////////////
+//BTN SADOW
+////////////////////////////////
+
+//BTN SHADOW
+@mixin btnShadow1 {
+  transition: all 0.3s ease;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+    4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+@mixin btnShadow1Hover {
+  transition: all 0.3s ease;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+}
+
+////////////////////////////////
+//BTN STANDARD MIXIN
+////////////////////////////////
+
+//BTN SIZE
+@mixin btnSize($btnWitdh, $btnHeight, $btnPadding) {
+  width: #{$btnWitdh}px;
+  height: #{$btnHeight}px;
+  padding: #{$btnPadding}em;
+}
+
+////////////////////////////////
+//BTN CONFIGURATION STYLE
+////////////////////////////////
+
+//BTN-ANIMATED
+
+//BTN-1
+@mixin style-btn1(
+  $bgBtn,
+  $btnClrText,
+  $btnBorderRadius,
+  $bgBtnHover,
+  $btnClrTextHover,
+  $bgBtnGradius,
+  $bgBtnHoverGradius
+) {
+  background-color: $bgBtn;
+  color: $btnClrText;
+  border-radius: $btnBorderRadius;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  z-index: 1;
+  background-image: linear-gradient(
+    315deg,
+    $bgBtn 0%,
+    $bgBtnGradius 74%
+  );
+  @include btnShadow1;
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    border-radius: $btnBorderRadius;
+    background-color: $bgBtnHover;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: linear-gradient(
+      315deg,
+      $bgBtnHover 0%,
+      $bgBtnHoverGradius 74%
+    );
+    @include btnShadow1Hover;
+  }
+  &:hover {
+    color: $btnClrTextHover;
+  }
+  &:hover:after {
+    top: 0;
+    height: 100%;
+  }
+  &:active {
+    top: 2px;
+  }
+}
+
+//BTN-2
