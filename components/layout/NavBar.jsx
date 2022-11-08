@@ -13,6 +13,7 @@ const MENU_LIST = [
   { text: 'item2', href: '/item2' },
   { text: 'item3', href: '/item3' },
   { text: 'item4', href: '/item4' },
+  { text: 'slug', href: '/slug' },
 ];
 
 export default function NavBar() {

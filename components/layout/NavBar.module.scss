@@ -1,5 +1,5 @@
 @use '../../styles/theme' as *;
-@use '../../styles/structure' as *;
+@use '../../styles/textStyle' as *;
 
 .NavBar {
   width: 100vw;
@@ -11,6 +11,9 @@
   background: $bgNavBar;
 
   a {
-    @include navItem;
+    @include font-size(18, 18, 1.2);
+    @include font-family;
+    margin: 1em;
+    color: $clrNavItems;
   }
 }

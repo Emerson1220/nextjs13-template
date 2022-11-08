@@ -1,4 +1,6 @@
+//Librairie
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 function ActiveLink({ text, href, active, showResults }) {
   const router = useRouter();
@@ -14,13 +16,13 @@ function ActiveLink({ text, href, active, showResults }) {
   };
 
   return (
-    <a
+    <Link
       href={href}
       onClick={pushRef}
       className={router.pathname == `${href}` ? `${active}` : ''}
     >
       {text}
-    </a>
+    </Link>
   );
 }
 

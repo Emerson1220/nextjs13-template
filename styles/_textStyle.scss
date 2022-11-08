@@ -1,0 +1,64 @@
+@use './styles/theme' as *;
+
+////////////////////////////////
+//TEXTE CONFIGURATION
+////////////////////////////////
+
+@mixin title {
+  color: $secondary30;
+  @include font;
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+@mixin subTitle {
+  color: $secondary30;
+  @include font;
+  margin: 0;
+  line-height: 1.15;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@mixin description {
+  color: $paragraphe;
+  @include font;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+////////////////////////////////
+//FONT OPTIONS
+////////////////////////////////
+
+@mixin font-size(
+  $font-size,
+  $line-height: normal,
+  $letter-spacing: normal
+) {
+  font-size: $font-size * 1px;
+
+  @if $line-height==normal {
+    line-height: normal;
+  } @else {
+    line-height: $line-height / $font-size;
+  }
+
+  @if $letter-spacing==normal {
+    letter-spacing: normal;
+  } @else {
+    letter-spacing: #{$letter-spacing / $font-size}em;
+  }
+}
+/* ===== Usage ===== */
+// p {
+//     @include font-size(12, 18, 1.2);
+//     // returns
+//     font-size: 12px;
+//     line-height: 1.5; // 18 / 12
+//     letter-spacing: 0.1em;
+//   }
