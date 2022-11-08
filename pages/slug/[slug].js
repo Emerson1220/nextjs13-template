@@ -1,5 +1,6 @@
 //Librairies
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 //SEO
 import siteMetadata from '../../data/siteMetaData';
@@ -13,14 +14,14 @@ export default function Slug() {
   //   console.log(router);
 
   //Methode push (retour en arrière possible)
-  const onClickPush = () => {
-    router.push('/');
-  };
+  // const onClickPush = () => {
+  //   router.push('/');
+  // };
 
   //Methode replace (retour en arrière impossible)
-  const onClickReplace = () => {
-    router.replace('/');
-  };
+  // const onClickReplace = () => {
+  //   router.replace('/');
+  // };
 
   return (
     <>
@@ -34,8 +35,9 @@ export default function Slug() {
       <main className={styles.Home}>
         {' '}
         <h1>{router.query.slug}</h1>
-        <button onClick={onClickPush}>Push</button>
-        <button onClick={onClickReplace}>Replace</button>
+        <small>
+          <Link href='/categorie'>La catégorie</Link>
+        </small>
       </main>
     </>
   );

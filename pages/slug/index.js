@@ -11,16 +11,6 @@ import HeadSeo from '../../components/seo/HeadSeo';
 import styles from './page.module.scss';
 
 export default function index() {
-  //Methode replace (retour en arrière impossible)
-  const cardClickHandler = () => {
-    router.push({
-      pathname: '/slug/[slug]',
-      query: {
-        slug: 'project',
-      },
-    });
-  };
-
   return (
     <>
       <HeadSeo
