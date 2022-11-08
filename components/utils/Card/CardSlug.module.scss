@@ -1,0 +1,13 @@
+@use '../../../styles/theme' as *;
+
+.cardSlug {
+  width: 200px;
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 1em;
+  text-decoration: none;
+  &:hover {
+    background: red;
+    color: white;
+  }
+}

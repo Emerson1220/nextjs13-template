@@ -1,5 +1,8 @@
 //Librairies
 
+//Components
+import CardSlug from '../../components/utils/Card/CardSlug';
+
 //SEO
 import siteMetadata from '../../data/siteMetaData';
 import HeadSeo from '../../components/seo/HeadSeo';
@@ -8,6 +11,16 @@ import HeadSeo from '../../components/seo/HeadSeo';
 import styles from './page.module.scss';
 
 export default function index() {
+  //Methode replace (retour en arrière impossible)
+  const cardClickHandler = () => {
+    router.push({
+      pathname: '/slug/[slug]',
+      query: {
+        slug: 'project',
+      },
+    });
+  };
+
   return (
     <>
       <HeadSeo
@@ -20,6 +33,11 @@ export default function index() {
       <main className={styles.Home}>
         {' '}
         <h1>Slug</h1>
+        <div className={styles.Content}>
+          <CardSlug />
+          <CardSlug />
+          <CardSlug />
+        </div>
       </main>
     </>
   );
