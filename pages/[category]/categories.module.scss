@@ -1,0 +1,10 @@
+@use '../../styles/theme' as *;
+@use '../../styles/container' as *;
+.Categories {
+  @include container;
+  .Content {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1em;
+  }
+}

@@ -1,6 +1,9 @@
 //Librairies
 import { useRouter } from 'next/router';
-import Link from 'next/link';
+// import Link from 'next/link';
+
+//components
+import FiltersCategories from '../../components/utils/Filters/FilterCategories';
 
 //Styles
 import style from './category.module.scss';
@@ -15,17 +18,7 @@ export default function index() {
     <div className={style.Category}>
       <h1>{category}</h1>
       <p>Filtre</p>
-      <div>
-        <Link href={`/${router.query.category}/categorie1`}>
-          catogorie 1
-        </Link>
-        <Link href={`/${router.query.category}/categorie1`}>
-          catogorie 2
-        </Link>
-        <Link href={`/${router.query.category}/categorie1`}>
-          catogorie 3
-        </Link>
-      </div>
+      <FiltersCategories category={router.query.category} />
     </div>
   );
 }
