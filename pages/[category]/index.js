@@ -1,6 +1,5 @@
 //Librairies
 import { useRouter } from 'next/router';
-// import Link from 'next/link';
 
 //components
 import FiltersCategories from '../../components/utils/Filters/FilterCategories';
@@ -19,6 +18,7 @@ export default function index() {
       <h1>{category}</h1>
       <p>Filtre</p>
       <FiltersCategories category={router.query.category} />
+      <p>test redirection</p>
     </div>
   );
 }
