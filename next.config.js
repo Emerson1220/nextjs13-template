@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   env: {
     MONGODB_URI:
-      'mongodb+srv://Emerson:P&86Ckd!4Teq@sTC@cluster0.bkdzj6c.mongodb.net/NetxJS13?retryWrites=true&w=majority',
+      'mongodb+srv://Emerson:xNeP7Dz7wj0mCQrL@cluster0.bkdzj6c.mongodb.net/NetxJS13?retryWrites=true&w=majority',
   },
 };
 

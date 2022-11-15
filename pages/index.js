@@ -1,8 +1,6 @@
 //Librairies
 
 //Components
-import BtnStandard from '../components/utils/Btn/BtnPrimary';
-import BtnAnimated from '../components/utils/Btn/BtnAnimated.jsx';
 
 //SEO
 import siteMetadata from '../data/siteMetaData';
