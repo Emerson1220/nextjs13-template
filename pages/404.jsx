@@ -1,8 +1,9 @@
-import React from 'react';
+//style
+import style from './Error404.module.scss';
 
-export default function error404() {
+export default function Error404() {
   return (
-    <div>
+    <div className={style.Error404}>
       <h1>Page 404</h1>
     </div>
   );

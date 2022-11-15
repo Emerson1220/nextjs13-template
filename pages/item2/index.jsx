@@ -7,7 +7,7 @@ import HeadSeo from '../../components/seo/HeadSeo';
 //Styles
 import styles from './page.module.scss';
 
-export default function index() {
+export default function Index() {
   return (
     <>
       {' '}

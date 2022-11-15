@@ -32,11 +32,11 @@ export default function Slug() {
         ogTwitterImage={siteMetadata.siteLogoSquare}
         ogType={'website'}
       />{' '}
-      <main className={styles.Home}>
+      <main className={styles.Slug}>
         {' '}
-        <h1>{router.query.slug}</h1>
+        <h1>{router.query.article}</h1>
         <small>
-          <Link href='/categorie'>La catégorie</Link>
+          <Link href='/category/categorie1'>categorie</Link>
         </small>
       </main>
     </>

@@ -5,15 +5,15 @@ import Link from 'next/link';
 //Styles
 import style from './CardSlug.module.scss';
 
-export default function CardSlug() {
+export default function CardSlug(props) {
   //Variable
-  const slug = 'test';
+  const { titre, slug, description, categorie, annee } = props.projet;
 
   return (
-    <Link href={`/slug/${slug}`} className={style.cardSlug}>
-      <h2>Title</h2>
-      <p>Description</p>
-      <p>Category</p>
+    <Link href={`/blog/${titre}`} className={style.cardSlug}>
+      <h2>Title{titre}</h2>
+      <p>Description{description}</p>
+      <p>Category{categorie}</p>
     </Link>
   );
 }

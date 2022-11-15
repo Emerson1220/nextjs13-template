@@ -1,0 +1,6 @@
+@use '../styles/theme' as *;
+@use '../styles/container' as *;
+
+.Error404 {
+  @include container;
+}

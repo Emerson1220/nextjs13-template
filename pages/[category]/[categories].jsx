@@ -12,7 +12,7 @@ import HeadSeo from '../../components/seo/HeadSeo';
 //Styles
 import styles from './categories.module.scss';
 
-export default function categories() {
+export default function Categories(props) {
   const router = useRouter();
   let category = router.query.category;
   return (
@@ -29,9 +29,9 @@ export default function categories() {
         <h1>{category}</h1>
         <FiltersCategories category={router.query.category} />
         <div className={styles.Content}>
-          <CardSlug />
-          <CardSlug />
-          <CardSlug />
+          {/* <CardSlug key={props.projet._id} projet={props.projet} />
+          <CardSlug key={props.projet._id} projet={props.projet} />
+          <CardSlug key={props.projet._id} projet={props.projet} /> */}
         </div>
       </main>
     </>

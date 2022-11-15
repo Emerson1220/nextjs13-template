@@ -11,7 +11,7 @@ import HeadSeo from '../components/seo/HeadSeo';
 //Styles
 import styles from './Home.module.scss';
 
-export default function index() {
+export default function Index() {
   return (
     <>
       {' '}

@@ -1,7 +1,7 @@
 @use '../../styles/theme' as *;
 @use '../../styles/container' as *;
 
-.Home {
+.SlugIndex {
   @include container;
   .Content {
     display: grid;

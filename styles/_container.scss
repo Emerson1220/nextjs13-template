@@ -38,6 +38,7 @@ $breakpoints: (
   padding-right: 1rem;
   padding-left: 1rem;
   width: 100%;
+  min-height: 100vh;
 
   @include mq(sm) {
     max-width: $col-sm;

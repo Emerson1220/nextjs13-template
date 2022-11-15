@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/router';
 
-export default function dateFilter() {
+export default function DateFilter() {
   //Variable
   const router = useRouter();
   console.log(router.query);
