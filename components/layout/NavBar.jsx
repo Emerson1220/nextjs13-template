@@ -10,10 +10,8 @@ import style from './NavBar.module.scss';
 //Data
 const MENU_LIST = [
   { text: 'Accueil', href: '/' },
-  { text: 'item2', href: '/item2' },
-  { text: 'item3', href: '/item3' },
-  { text: 'item4', href: '/item4' },
   { text: 'articles', href: '/articles' },
+  { text: 'item', href: '/item-1' },
 ];
 
 export default function NavBar() {

@@ -18,9 +18,8 @@ export default function Index() {
         ogTwitterImage={siteMetadata.siteLogoSquare}
         ogType={'website'}
       />
-      <main className={styles.Home}>
-        {' '}
-        <h1>Item2</h1>
+      <main className={styles.Item1}>
+        <h1>Item-1</h1>
       </main>
     </>
   );
