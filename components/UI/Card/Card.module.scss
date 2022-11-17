@@ -1,7 +1,9 @@
 @use '../../../styles/theme' as *;
 
-.cardSlug {
+.Card {
   width: 200px;
+  display: flex;
+  flex-direction: column;
   border: 1px solid red;
   border-radius: 5px;
   padding: 1em;

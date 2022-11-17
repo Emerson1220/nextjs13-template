@@ -1,3 +1,4 @@
+//Meta données
 const siteMetadata = {
   companyName: 'Example',
   phoneNumber: '(xxx) xxx-xxxx',

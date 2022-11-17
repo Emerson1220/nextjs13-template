@@ -3,19 +3,33 @@
 import { connectToMongoDb } from '../../helpers/mongodb';
 
 //Components
-import Card from '../../components/UI/Card/CardSlug';
+import Card from '../../components/UI/Card/Card';
 
 //Style
 import style from './page.module.scss';
 
-export default function index(props) {
+//SEO
+import siteMetadata from '../../data/siteMetaData';
+import HeadSeo from '../../components/seo/HeadSeo';
+
+export default function Index(props) {
   return (
-    <div className={style.Articles}>
-      <h1>Articles</h1>
-      {props.data.map((article) => (
-        <Card key={article._id} data={article} />
-      ))}
-    </div>
+    <>
+      {' '}
+      <HeadSeo
+        title={`Title`}
+        description={`Description`}
+        canonicalUrl={siteMetadata.siteUrl}
+        ogTwitterImage={siteMetadata.siteLogoSquare}
+        ogType={'website'}
+      />
+      <main className={style.Articles}>
+        <h1>Articles</h1>
+        {props.data.map((article) => (
+          <Card key={article._id} data={article} />
+        ))}
+      </main>
+    </>
   );
 }
 

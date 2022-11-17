@@ -1,17 +1,16 @@
 //Librairies
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 //Styles
-import style from './CardSlug.module.scss';
+import style from './Card.module.scss';
 
-export default function CardSlug(article) {
+export default function Card(article) {
   console.log(article);
   //Variable
   const { titre, description, categorie } = article.data;
 
   return (
-    <Link href={`/blog/${titre}`} className={style.cardSlug}>
+    <Link href={`/articles/${titre}`} className={style.Card}>
       <h2>Card</h2>
       <h2>Title{titre}</h2>
       <p>Description{description}</p>
