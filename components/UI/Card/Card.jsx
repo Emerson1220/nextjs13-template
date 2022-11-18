@@ -7,14 +7,14 @@ import style from './Card.module.scss';
 export default function Card(article) {
   console.log(article);
   //Variable
-  const { titre, description, categorie } = article.data;
+  const { titre, description, categorie, slug } = article.data;
 
   return (
     <Link href={`/articles/${titre}`} className={style.Card}>
-      <h2>Card</h2>
-      <h2>Title{titre}</h2>
-      <p>Description{description}</p>
-      <p>Category{categorie}</p>
+      <h2>{titre}</h2>
+      <p>{description}</p>
+      <p>{categorie}</p>
+      <p>{slug}</p>
     </Link>
   );
 }

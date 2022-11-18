@@ -1,9 +1,9 @@
 //Libraire
-// import { MongoClient } from 'mongodb';
 import { connectToMongoDb } from '../../helpers/mongodb';
 
 //Components
 import Card from '../../components/UI/Card/Card';
+// import Filters from '../../components/UI/Filters/FilterCategories';
 
 //Style
 import style from './page.module.scss';
@@ -25,6 +25,7 @@ export default function Index(props) {
       />
       <main className={style.Articles}>
         <h1>Articles</h1>
+        {/* <Filters /> */}
         {props.data.map((article) => (
           <Card key={article._id} data={article} />
         ))}
@@ -38,13 +39,14 @@ export async function getStaticProps() {
   let data;
 
   try {
-    const connect = await connectToMongoDb();
-    const db = connect.db();
+    const client = await connectToMongoDb();
+    const db = client.db('projets');
 
     data = await db.collection('mes_Projets').find().toArray();
   } catch (error) {
     data = [];
   }
+
   return {
     props: {
       data: JSON.parse(JSON.stringify(data)),
