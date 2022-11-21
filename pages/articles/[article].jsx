@@ -32,12 +32,29 @@ export default function Index(props) {
 }
 
 export async function getStaticPaths() {
-  const paths = articles.map((article) => ({
-    params: { article: post.article },
+  // Connexion à MongoDB
+  // const client = await connectToDatabase();
+  // const db = client.db();
+
+  const client = await connectToMongoDb();
+  const db = client.db('projets');
+
+  // Récupérer les projets
+  const projets = await db.collection('projets').find().toArray();
+
+  let arrayPaths = projets.map((projet) => {
+    return projet.client;
+  });
+
+  arrayPaths = [...new Set(arrayPaths)];
+
+  const dynamicPaths = arrayPaths.map((path) => ({
+    params: { client: path },
   }));
+
   return {
-    paths: paths,
-    fallback: false, // can also be true or 'blocking'
+    paths: dynamicPaths,
+    fallback: false,
   };
 }
 
